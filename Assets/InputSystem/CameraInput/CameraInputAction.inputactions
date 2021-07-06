@@ -16,48 +16,37 @@
             ],
             "bindings": [
                 {
-                    "name": "Gamepad",
-                    "id": "1e662a7a-7cbd-44b6-a931-d1b76a2278b2",
-                    "path": "2DVector(mode=2)",
-                    "interactions": "",
-                    "processors": "InvertVector2(invertX=false,invertY=false)",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "left",
-                    "id": "87213c3f-415f-4712-b04e-ab73b15ca4b2",
-                    "path": "<Gamepad>/rightStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "3b90c3d4-2313-4ce5-a139-dbe24a506d88",
-                    "path": "<Gamepad>/rightStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "2D Vector",
                     "id": "be681dbd-4b57-49f2-a833-bf80e14caaed",
                     "path": "2DVector",
                     "interactions": "",
-                    "processors": "InvertVector2(invertY=false)",
+                    "processors": "ScaleVector2(x=0.4,y=0.4)",
                     "groups": "",
                     "action": "Rotate",
                     "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7a94e670-ae5e-43bb-b7d1-f90cecd064bf",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "6979154b-a03a-4cd1-86fd-ea64de89e4d9",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "left",
@@ -80,6 +69,28 @@
                     "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "d42aebe7-00d2-4585-9019-38c9ded49bd5",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=0.4,y=0.4)",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a6479f41-95da-4e66-84c2-3149cff5ea1a",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

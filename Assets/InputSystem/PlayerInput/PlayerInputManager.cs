@@ -12,12 +12,26 @@ public class PlayerInputManager : MonoBehaviour, PlayerInputAction.IPlayerInputA
     {
         input = new PlayerInputAction.PlayerInputActions(new @PlayerInputAction());
         input.SetCallbacks(this);
+    }
+
+    private void OnEnable()
+    {
         input.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.Disable();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 velocity = context.ReadValue<Vector2>();
         CustomEvent.Trigger(gameObject, "OnMove", velocity.x, velocity.y);
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        CustomEvent.Trigger(gameObject, "OnJump", context.performed);
     }
 }

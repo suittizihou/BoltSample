@@ -12,11 +12,20 @@ public class CameraInputManager : MonoBehaviour, @CameraInputAction.ICameraActio
     {
         input = new CameraInputAction.CameraActionActions(new @CameraInputAction());
         input.SetCallbacks(this);
+    }
+
+    private void OnEnable()
+    {
         input.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.Disable();
     }
 
     public void OnRotate(InputAction.CallbackContext context)
     {
-        CustomEvent.Trigger(this.gameObject, "OnRotate", context.ReadValue<Vector2>().x);
+        CustomEvent.Trigger(this.gameObject, "OnRotate", context.ReadValue<Vector2>());
     }
 }
